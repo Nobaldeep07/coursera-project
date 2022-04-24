@@ -1,0 +1,110 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+    margin-bottom: 2em;
+}
+.container{
+    width: 100%;
+    display: inline-block;
+}
+.container > div{
+    border: 1px solid black;
+    width: 33%;
+    background-color: powderblue;
+}
+.chicken h2{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.2em 0.8em;
+    float: right;
+    margin-top: 0;
+    background-color: teal;
+}
+.chicken p{
+    clear: both;
+    text-align: start;
+    padding: 10px;
+    line-height: 20px;
+}
+.beef h2{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.2em 1em;
+    float: right;
+    margin-top: 0; 
+    background-color: grey;
+    color: white;
+}
+.beef p{
+    clear: both;
+    text-align: start;
+    padding: 10px;
+    line-height: 20px;
+}
+.sushi h2{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.2em 1em;
+    float: right;
+    margin-top: 0;
+    background-color: greenyellow;
+}
+.sushi p{
+    clear: both;
+    text-align: start;
+    padding: 10px;
+    line-height: 20px;
+}
+/*Desktop view*/
+@media only screen and (min-width : 992px){
+    
+    .container > div{
+        width: 31%;
+        float: left;
+        margin: 10px;
+    }
+    
+}
+/*Tablet view*/
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .chicken, .beef{
+        flex: 48%;
+        justify-content: center;
+    }
+    .chicken{
+        margin-right: 10px ;
+    }
+    
+    
+    .sushi{
+        flex: 100%;
+        float: left;
+        margin-top: 10px;
+    }
+  
+}
+
+/*Mobile view*/
+@media only screen and (min-width : 1px) and (max-width : 767px ) {
+   
+    .container{
+        display: inline-block;
+    }
+    .container div {
+        width: 80%;
+        margin: 10px auto;
+        
+      
+    }
+    
+}
